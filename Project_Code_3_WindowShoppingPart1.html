@@ -80,14 +80,14 @@
           infowindow.open(map, marker);
           // Make sure the marker property is cleared if the infowindow is closed.
           infowindow.addListener('closeclick',function(){
-            infowindow.setMarker = null;
+            infowindow.marker = null;
           });
         }
       }
     </script>
 
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=MYAPIKEY&v=3&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5Zusczf03RjQryWwOlHxboT0FKawmB7k&callback=initMap">
     </script>
 
   </body>
