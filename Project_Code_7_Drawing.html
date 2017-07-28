@@ -258,6 +258,7 @@
           polygon.setEditable(true);
           // Searching within the polygon.
           searchWithinPolygon();
+          
           // Make sure the search is re-done if the poly is changed.
           polygon.getPath().addListener('set_at', searchWithinPolygon);
           polygon.getPath().addListener('insert_at', searchWithinPolygon);
@@ -366,12 +367,14 @@
             markers[i].setMap(null);
           }
         }
+        //calculate the area of the polygon and alert it
+        alert(google.maps.geometry.spherical.computeArea(polygon.getPaths().getAt(0))+"m^2");
       }
     </script>
 
     <script async defer
         src=
-        "https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=MYAPIKEY&v=3&callback=initMap">
+        "https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=AIzaSyB5Zusczf03RjQryWwOlHxboT0FKawmB7k&v=3&callback=initMap">
     </script>
 
   </body>
